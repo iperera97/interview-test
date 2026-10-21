@@ -2,7 +2,7 @@
 # Todo:
 - Use a thread pool to fetch pages in concurrently and cut waiting time.
 - Add retry with exponential backoff (decorator) for 5xx errors. In production, i like to use tenacity library.
-- In production, I like to use Polars for easier transformations and streaming processing, so the full data isn't loaded into memory.
+- In production, I like to use Polars for easier transformations and streaming processing
 - Add a lint check (e.g. ruff) to catch style and code issues. Skipped this time due to limited time.
 
 # Assumption:

@@ -3,18 +3,18 @@
 - Use a thread pool to fetch pages in concurrently and cut waiting time.
 - Add retry with exponential backoff (decorator) for 5xx errors. In production, i like to use tenacity library.
 - In production, I like to use Polars for easier transformations and streaming processing
-- Add a lint check (e.g. ruff) to catch style and code issues. Skipped this time due to limited time.
+- Add a lint check (e.g. ruff) to catch style and code issues. Skipped this due to limited time.
 
 # Assumption:
 - when doing resync, only status, date and time can change for an existing appt_id.
 """
-
 import logging
 import time
 from collections.abc import Generator
 from datetime import datetime
 import sqlite3
 from typing import Protocol
+
 
 # init logging
 logging.basicConfig(
